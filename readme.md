@@ -37,10 +37,11 @@ Dataset yang digunakan berasal dari open data Airbnb dengan fitur-fitur utama:
 Dataset Airbnb Bangkok memiliki 17 fitur yang terdiri tiap fitur memiliki tipe data int, float dan object (biasanya merupakan teks). Namun terdapat kolom anomali yaitu Unnamed: 0 kolom ini nantinya akan dihapus dari dataset. Dataset ini juga memiliki baris data sebanyak 15854 data sehingga ukuran dataset ini 15854 baris x 16 kolom.
 
 Berdasarkan statistik deskriptif dari kolom yang perlu diperhatikan ada di kolom price, terdapat harga listing yang bernilai 0. Penyewaan listing tidak mungkin 0, untuk itu akan dilakukan pengecekan pada data tersebut dan akan dilakukan pengahpusan atau tidak di analisis nanti.
-![alt text](image-2.png)
+![image-2](https://github.com/user-attachments/assets/6999dc88-9692-4053-8ed6-eb891256d732)
 
 Berdasarkan pengecekan data, hanya 1 listing yang memilki harga 0. Pada kolom data lainnya, minimum_night, number_reviwes,last_review, hingga kolom calculated_host_list tidak ada informasi tambahan hanya nilai nan dan 0. Selain itu host yang mempunyai listing ini hanya satu saja listing yang dimiliki. Mungkin saja listing ini sudah off atau belum terjamah oleh wisatawan. Oleh karena itu data ini akan di drop dan dianggap anaomali
-![alt text](image-1.png)
+![image-1](https://github.com/user-attachments/assets/e2ee14ae-8152-4703-8a1a-55e822fff91d)
+
 
 ## 4. Data Preparation
 
