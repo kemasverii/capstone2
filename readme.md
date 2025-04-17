@@ -23,16 +23,21 @@ Beberapa permasalahan utama yang ingin dijawab:
 
 Dataset yang digunakan berasal dari open data Airbnb dengan fitur-fitur utama:
 
-- `id`, `name`, `host_id`, `host_name`: identitas listing dan host
-- `neighbourhood`: wilayah geografis listing
-- `latitude`, `longitude`: koordinat lokasi
-- `room_type`: tipe kamar (Entire home/apt, Private room, Shared room, Hotel)
-- `price`: harga per malam
-- `minimum_nights`: malam minimum menginap
-- `number_of_reviews`, `number_of_reviews_ltm`: ulasan total dan 12 bulan terakhir
-- `last_review`: tanggal ulasan terakhir
-- `availability_365`: jumlah hari tersedia dalam setahun
-- `calculated_host_listings_count`: jumlah listing milik host
+- **id** : id unik Airbnb untuk listing (daftar penginapan).    
+- **name** : nama dari listing
+- **host_id** : id unik Airbnb untuk host/pemilik
+- **host_name** : nama host, biasanya hanya nama depan
+- **neighbourhood** : wilayah atau lingkungan tempat listing berada, ditentukan oleh latitude dan longtitude
+- **latitude** : garis lintang
+- **longitude** : garis bujur
+- **room_type** : tipe tempat penginapan (rumah,kamar bersama,rumah/apartement)
+- **price** : harga harian dalam mata uang lokal.
+- **number_of_reviews** : jumlah ulasan yang dimiliki oleh listing tersebut
+- **last_review** : tanggal dari ulasan terakhir atau terbaru
+- **calculated_host_listings_count** :jumlah listing yang dimiliki host di kota atau wilayah tersebut dalam data saat ini.
+- **availability_365** : : ketersediaan properti dalam 365 hari ke depan
+- **reviews_per_month** : review bulanan dari tiap tempat 
+- **number_of_reviews_ltm** : jumlah ulasan yang diterima oleh listing dalam 12 bulan terakhir.
 
 Dataset Airbnb Bangkok memiliki 17 fitur yang terdiri tiap fitur memiliki tipe data int, float dan object (biasanya merupakan teks). Namun terdapat kolom anomali yaitu Unnamed: 0 kolom ini nantinya akan dihapus dari dataset. Dataset ini juga memiliki baris data sebanyak 15854 data sehingga ukuran dataset ini 15854 baris x 16 kolom.
 
