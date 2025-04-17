@@ -115,7 +115,7 @@ Langkah-langkah persiapan data:
 
 Grafik diatas menunjukkan top 3 daerah neigbourhood disetiap kelompoknya, mulai dari aktivitas rendah, sedang hingga tinggi. Setiap kelompok ini nantinya akan dianalisis untuk melihat perbandingan harga dan tipe kamar. sehingga nantinya turis ataupun pengembang Airbnb dapat mengetahui perbedaan harga ditiap kelompok tersebut.
 
-### b. **Analisis Harga Penginapan berdasarkan Tingkat Listing**
+### b. **Analisis Harga Penginapan Berdasarkan Tingkat Listing**
 Sebelum menganalisis lebih lanjut untuk setiap segmen kelas, kolom harga akan dianalisis terlebih dahulu secara umum. Setalah itu akan terdapat penambahan kolom: activity_level
   - **activity_level** : kelas aktivitas listing tiap data
   
@@ -137,7 +137,7 @@ Untuk kelompok rendah persentase harga dengan tipe kamar private room dan Entire
 Berdasarkan informasi ini, didapatkan insight:
  > Tipe kamar Entire Home/apt menjadi tipe kamar termahal untuk setiap kelompok aktivitas listing. Baik daerah listing itu sepi atau tidak, harga tipe kamar Entire home/apt menjadi tipe termahal
 
-### **c. Analisa Ketersedian Listing**
+### **c. Analisa Ketersedian Listing Berdasarkan Tingkat Listing**
 
 Analisis ini bertujuan untuk melihat persebaran ketersedian listing di setiap kelompok aktivitas listing.
 
