@@ -47,16 +47,19 @@ Berdasarkan pengecekan data, hanya 1 listing yang memilki harga 0. Pada kolom da
 
 Langkah-langkah persiapan data:
 - Menghapus kolom unamed
-  ![alt text](image-3.png)
+  ![image-3](https://github.com/user-attachments/assets/14455135-a8be-4272-9476-ad3a71108c7e)
+
 
 
 - Transformasi Tipe data kolom
   Berdasarkan pemahaman data sebelumnya, kolom last_review dapat diubah tipe datanya menjadi tipe data date time dan juga kolom price diubah tipe datanya menjadi numeric agar nanto bisa dilakukan operasi aritmatika
-  ![alt text](image-4.png)
+  ![image-4](https://github.com/user-attachments/assets/323f2836-3bcf-4b9b-86d4-43684b95bae2)
+
 
 - Menghapus/mengabaikan nilai kosong dan ekstrem (outlier) pada harga dan availability.
   Terlihat kolom last_review dan reviews_per_month memiliki persentase missing value sebesar 36.5 % Selain itu kolom name memiliki persentase missing value sebesar 5%. Kolom host_name juga memiliki persentase missing value sebesar 0.006%
-  ![alt text](image-6.png)
+  ![image-6](https://github.com/user-attachments/assets/3b4505d4-ff0a-4b5b-bb48-8c64e7bd9934)
+
 
   - Missing value pada kolom **last_review** dan **reviews_per_month** dapat didrop atau tidak dilakukan drop.Kolom tersebut dapat dirop jika analisa tidak terlalu membutuhkan kolom tersebut,namun akan dicek terlebih dahulu apakah bisa langsung dihapus atau tidak.
 
@@ -68,7 +71,8 @@ Langkah-langkah persiapan data:
   Pengecekan duplikasi data di seluruh kolom, tidak ditemukan data duplikat. Namun hal ini belum tentu benar, perlu penggalian informasi lagi terkait data duplikat yang ada pada dataset.
 
   Ditemukan bahwa 1 host dapat memiliki lebih dari 1 listing, artinya bisa jadi ada potensi data duplikat untuk 1 host yang memiliki banyak listing.
-  ![alt text](image-7.png)
+  ![image-7](https://github.com/user-attachments/assets/23fe447a-4bf1-418d-a4bf-099329c2e3cd)
+
   
   Ditemukan bahwa 1 host dapat memiliki lebih dari 1 listing, artinya bisa jadi ada potensi data duplikat untuk 1 host yang memiliki banyak listing.
   
@@ -81,9 +85,11 @@ Langkah-langkah persiapan data:
 ### a. Pengelompokkan Data Berdasarkan Neigbourhood:
   Tahapan awal untuk menganalisis kelompok aktivitas listing berdasarkan neighbourhood, dihitung terlebih dahulu jumlah listing yang ada di setiap neigbourhood. Setelah itu dilanjutkan dengan analisa-analisa mendalam setiap kelompok aktivitas listing
 
-  ![alt text](image-8.png)
+  ![image-8](https://github.com/user-attachments/assets/2553d582-6ef9-4082-9547-80509fc0925b)
+
   
-  ![alt text](image-9.png)
+  ![image-9](https://github.com/user-attachments/assets/939c3884-c690-4eac-b59e-6aba0d8e3b6c)
+
 
   Berdasarkan plot bar terlihat 5 Neighbourhood di Bangkok yang mempunyai total listing tertinggi, didapatkan daerah teramai listing yaitu di daerah vadhana dengan total listing yaitu 2151 listing dilanjut dengan 4 neighbourhood lainnya.
 
@@ -99,7 +105,8 @@ Langkah-langkah persiapan data:
 
   Pengelompokkan daerah aktif listing dibagi menjadi 3, berdasrakan persentase distribusi yaitu Q1, Q2, dan Q3.Selein itu untuk mempermudah intepretasi analisa lebih lanjut. 
 
-![alt text](image-10.png)
+![image-10](https://github.com/user-attachments/assets/c11ba347-e1ec-42f5-be85-9d59cc0e97c2)
+
 
 Grafik diatas menunjukkan top 3 daerah neigbourhood disetiap kelompoknya, mulai dari aktivitas rendah, sedang hingga tinggi. Setiap kelompok ini nantinya akan dianalisis untuk melihat perbandingan harga dan tipe kamar. sehingga nantinya turis ataupun pengembang Airbnb dapat mengetahui perbedaan harga ditiap kelompok tersebut.
 
@@ -107,13 +114,14 @@ Grafik diatas menunjukkan top 3 daerah neigbourhood disetiap kelompoknya, mulai 
 Sebelum menganalisis lebih lanjut untuk setiap segmen kelas, kolom harga akan dianalisis terlebih dahulu secara umum. Setalah itu akan terdapat penambahan kolom: activity_level
   - **activity_level** : kelas aktivitas listing tiap data
   
-![alt text](image-11.png)
+![image-11](https://github.com/user-attachments/assets/f443a123-7306-4277-b299-a18a02cbe796)
+
 
 Berdasarkan grafik di atas, kelompok listing tertinggi memiliki rata-rata harga sebesar 4353 BHT. Namun jika melihat total listing yang ada pada kelompok tinggi, banyaknya listing yang ada sangatlah sedikit dibandingkan dengan 2 kelompok lainnya yaitu kelompok Rendah dan Sedang.
 
 Untuk memperjelas konteks harga pada masing-masing kelompok, dilakukan perbandingan tipe kamar/bagungan yang menjadi faktor mengapa harga bisa berbeda di tiap kelas aktivitas listing.
 
-![alt text](image-12.png)
+![image-12](https://github.com/user-attachments/assets/d49ef6ce-a9cd-428e-af04-de8ac4b05373)
 
 Berdasarkan tabel deskripsi dan grafik di atas, tipe kamar yang menjadi faktor tingginya harga di kelompok aktivitas tinggi yaitu Entire home/apt. Dengan persentase sebesar 69 % dengan rata - rata harga 4322 THB dikelasnya sebagai faktor tingginya harga dikelas tersebut. Namun untuk tipe shared room, mendapatkan persentase yang sangat kecil sebesar 0.2% hal ini jelas jauh sekali nilainya persentasenya dibandingkan Entire home/apt
 
@@ -128,15 +136,18 @@ Berdasarkan informasi ini, didapatkan insight:
 
 Analisis ini bertujuan untuk melihat persebaran ketersedian listing di setiap kelompok aktivitas listing.
 
-![alt text](image-13.png)
+![image-13](https://github.com/user-attachments/assets/e1a22e3e-3572-4a31-a35c-bde530024543)
+
 
 Berdasarkan boxplot di atas, persebaran jumlah hari di q1 untuk setiap kelompok aktivitas listing berbeda jauhh dimana ini mengindikasikan bahwa jumlah hari tersedia setiap kelompok berbeda. Kelompok listing Tinggi memiliki sebaran yang lebih luas yang dapat diartikan bahwa listing yang ada di kelompok ini, selalu dipesan oleh wisatawan atau di nonaktifkan oleh host.
 
 Selain itu, kelompok listing aktivitas rendah terlihat memiliki sebaran yang tidak seluas 2 kelompok lainnya, yang meindikasikan bahwa kelompok listing ini selalu tersedia listingnya sepanjang tahun.
 
-![alt text](image-14.png)
+![image-14](https://github.com/user-attachments/assets/b50d6030-cf24-4be5-939f-e24d96bb4563)
 
-![alt text](image-15.png)
+
+![image-15](https://github.com/user-attachments/assets/73ad9b2c-d150-4cb4-9881-203252d6cced)
+
 
 Berdasarlam grafik dan tabel proporsi untuk setiap kategori di tiap kelas aktivitas listing, didapatkan proporsi dari kelas listing tertinggi yaitu kategori ketersedian rendah. Hal ini disebabkan tingginya harga penginapan untuk kategori ketersedian rendah dengan harga 5272 THB. Besarnya proporsi untuk kategori aktivitas tinggi dengan ketersediaan rendah sebesar 41 %.
 
@@ -146,7 +157,8 @@ Pada kelas aktivitas rendah, ketersedian ruangan selama setahun penuh mayoritas 
 
 
 ### d. Visualisasi Geografis:
-![alt text](image-16.png)
+![image-16](https://github.com/user-attachments/assets/82d6ac41-97c6-477c-83ed-0562931bd02a)
+
 
 Berdasarkan grafik geografis di atas, sebaran listing membentuk daerahnya sendiri. Terlihat darah berwana hijau merupakan titik tengah dari kumpulan kelompok lainnya.Titik ini merupakan **kelompok listing tinggi**, ha ini dapat menandakan bahwa pusat keramaian berada di daerah listing tersebut. Melebar ke samping, kumpulan warnanya adalah biru yang menandakan daerah **kelompok listing sedang** dan terakhir **kelompok listing rendah** berada di daerah terluar yang menandakan daerah tersebut kurang diminati untuk penggunaan listingnya walaupun tersebar di berbagai daerah di kelompok tersebut.
 
