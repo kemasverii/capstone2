@@ -52,6 +52,7 @@ Berdasarkan pengecekan data, hanya 1 listing yang memilki harga 0. Pada kolom da
 
 Langkah-langkah persiapan data:
 - Menghapus kolom unamed
+  
   ![image-3](https://github.com/user-attachments/assets/14455135-a8be-4272-9476-ad3a71108c7e)
 
 
